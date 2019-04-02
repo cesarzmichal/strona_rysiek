@@ -1,0 +1,2 @@
+czcionka podstawowa: robotoregular
+czcionka menu: robotobold_condensed
