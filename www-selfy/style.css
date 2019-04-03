@@ -1,5 +1,7 @@
 body {
  margin: 0;
+ font-family: 'Roboto', sans-serif;
+ background-color: #f2f3f4
 }
 
 #logo img {
@@ -8,13 +10,13 @@ body {
 
 #bg {
     background:#a5adb0 url(assets/masthead@2x.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position-x: center;
     position: absolute;
     left: 0;   
     right: 0;
-    height: 500px;
+    height: 800px;
     z-index: -1000;
 }
 
@@ -23,11 +25,40 @@ main {
     margin: 0 auto;
     }
 
+/* a.dn {
+    display: none;
+} */
+
 nav a {
-    padding: 6px 24px;
-    margin: 0 6px;
+    padding: 4px 24px;
+    margin: 0 4px;
     color: inherit;
     text-decoration: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2d2438;
+    border-radius: 2px;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0,25s;
+    /* cubic-bazier.com */
+}
+
+/* pseudoklasa - co sie dzieje po najechaniu */
+nav a:hover {
+    background-color: #646d72;
+    color: #fff;
+    border-radius: 3px;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* nie pseudo-element tylko klasa - pseudo element :active */
+nav a.active {
+    background-color: #ffc000;
+    color: #fff;
+}
+
+nav a:hover {
+    background-color: #646d72;
 }
 
 header  {
@@ -36,4 +67,139 @@ header  {
     align-items: flex-end;
     padding-top: 60px;
     padding-bottom: 45px;
+    border-bottom: 1px solid #cad2d7
+}
+
+h1 {
+    font-family: 'Roboto';
+    font-size: 96px;
+    font-weight: 900;
+    margin-top: 170px;
+    margin-bottom: 15px;
+    letter-spacing: -2px;
+    color: #ffffff;
+    display: block;
+}
+
+h3 {
+    font-family: 'aleoitalic';
+    font-size: 28px;
+    font-style: italic;
+    letter-spacing: 0;
+    color: #e2e2e2;
+    font-weight: normal;
+    font-weight: normal;
+    margin: 25px 0 .5em;
+    display: block;
+}
+.spaceballs {
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: -1px;
+    margin: 25px 0 .5em;
+    color: #fff;
+}
+
+.slider-text {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 60px;
+    margin-bottom: 18px;
+    letter-spacing: -1px;
+    transition: color 0.5s ease-in-out;
+    }
+
+.slider-text a {
+    color: #3c4a52;
+    font-weight: bold;
+}
+
+.slider-text a:hover {
+    color: #ffc000;
+}
+
+a::selection {
+    background: #b3d4fc;
+}
+
+section.content {
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.content div {
+width: 30%;
+}
+
+section.content h2 {
+    font-size: 36px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    position: relative;
+    display: inline-block;
+}
+
+
+/* .content h2::after {
+content: ".";
+font-size: 56px;
+position: relative;
+padding-left: 3px;
+color: #ffc000;
+} */
+
+.content h2::after {
+content: "";
+position: absolute;
+background: #ffc000;
+width: 9px;
+height: 9px;
+display: block;
+right: -14px;
+bottom: 7px;
+}
+
+.content p {
+    line-height: 24px;
+    margin-top: 16px;
+    color: #656a6f;
+
+}
+
+footer {
+    border-top: 1px solid #cad2d7;
+    color: #9fa6aa;
+    padding: 50px 0 50px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.logo-footer {
+    display: flex;
+    align-items: center;
+}
+div.logo-footer img {
+    transition: all 250ms ease-in-out;
+    opacity: 1;
+    position: relative;
+    width: 45px;
+    margin-right: 10px;
+}
+
+.icons img {
+    margin: 0 3px;
+    width: 31px;
+    opacity: 0.6;
+    transition: all 0.3s ease-in-out;
+}
+
+footer img:hover {
+    opacity: 1;
 }
