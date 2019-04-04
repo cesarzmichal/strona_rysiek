@@ -1,0 +1,66 @@
+body {
+    background: #eee;
+    perspective: 1000px;
+}
+.box {
+    margin: 100px auto;
+    width: 100px;
+    position:relative;
+    height: 100px;
+    
+    transform-style: preserve-3d;
+    /* transition: all 3s ease-in-out; */
+    animation-name: obroty;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes obroty {
+    0% {
+        transform: rotateX(45deg) rotateY(0) rotateZ(115deg);    
+    }
+    25% {
+        transform: rotateX(85deg) rotateY(85deg) rotateZ(75deg);
+    }
+    50% {
+        transform: rotateX(145deg) rotateY(145deg) rotateZ(0deg);
+    }
+    75% {
+        transform: rotateX(85deg) rotateY(225deg) rotateZ(55deg);
+    }
+    100% {
+        transform: rotateX(45deg) rotateY(0) rotateZ(115deg);
+    }
+}
+/* .box:hover {
+    transform: rotateX(-45deg) rotateY(175deg);
+} */
+.face {
+    width: 100px;
+    height: 100px;
+    opacity: 0.6;
+    position: absolute;
+}
+.top {
+    background: lightblue;
+    transform: rotateX(90deg) translateZ(50px) translateY(-50px);
+}
+.bottom {
+    background: lightyellow;
+    transform: rotateX(90deg) translateZ(-50px) translateY(-50px);
+}
+.left {
+    background: lightsalmon;
+    transform: rotateY(90deg) translateX(50px) translateZ(-50px);
+}
+.right {
+    background: lightskyblue;
+    transform: rotateY(90deg) translateX(50px) translateZ(50px);
+}
+.front {
+    background: lightpink;
+}
+.back {
+    background: lightgreen;
+    transform: translateZ(-100px);
+}

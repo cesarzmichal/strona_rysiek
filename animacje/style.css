@@ -1,0 +1,71 @@
+body {
+    background: #eee;
+}
+.pasek {
+    width: 200px;
+    padding: 10px;
+    background: #888;
+    border: 4px solid #fff;
+    margin: 10px;
+}
+#p1:hover {
+    background: red;
+}
+#p2 {
+    transition: all 0.5s ease-in-out;
+}
+#p2:hover {
+    background: red;
+}
+/* zrób to samo z wykorzystaniem ::before zamiast wewnętrznego div-a */
+#p3 div {
+    background: red;
+    width: 0;
+    height: 10px;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#p3:hover div {
+    width: 100%;
+}
+#p4 {
+    position: relative;
+}
+#p4 div {
+    background: red;
+    width: 0;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#p4:hover div {
+    animation-name: pbar;
+    animation-duration: 1.5s;
+    animation-iteration-count: 3;
+    animation-timing-function: linear;
+    animation-direction: alternate; /* alternate */
+}
+/* klatki animacji dla #p4 div */
+@keyframes pbar {
+    0% {
+        width: 0;
+        left: 0;
+    }
+    25% {
+        width: 35%;
+        left: 25%;
+    }
+    50% {
+        width: 25%;
+        left: 50%;
+    }
+    75% {
+        width: 10%;
+        left: 75%;
+    }
+    100% {
+        width: 5%;
+        left: 100%;
+    }
+}
+
