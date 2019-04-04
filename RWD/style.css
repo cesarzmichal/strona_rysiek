@@ -1,0 +1,65 @@
+body {
+background: #eee;
+}
+
+main {
+    width: 1200px;
+    background: lightblue;
+    margin: auto;
+}
+
+header {
+    height: 200px;
+    background: lightcoral;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+}
+section div {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    width: 30%;
+    height: 100px;
+    position: relative;
+    display: inline-block;
+    background: lightgreen;
+}
+
+/* warunkowe style aby uzykać RWD, może być używane do dookreslenia jak ma wyglądać np. wydruk media print*/
+@media screen and (max-width: 1200px) {
+ main {
+        width: 900px;
+        background: red;
+ }   
+ header {
+        background: darkblue;
+ }
+@media screen and (max-width: 1000px) and (min-width: 850px) {
+ main {
+        width: 800px;
+        background: red;
+ }   
+ header {
+        background: darkcyan;
+ }
+@media screen and (max-width: 768px) {
+ main {
+        width: 90%;
+        background: red;
+ }   
+ header {
+        background: darkkhaki;
+        
+ }
+ section {
+    flex-direction: column;
+ }
+ section div {
+     width: 100%;
+     margin: 10px 0;
+ }
+
+}
