@@ -1,0 +1,60 @@
+body {
+    background: #eee;
+}
+main {
+    width: 1200px;
+    background: lightblue;
+    margin: 0 auto;
+}
+header {
+    height: 200px;;
+    background: lightcoral;
+}
+section {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+}
+section div {
+    margin: 10px;
+    width: 30%;
+    height: 100px;
+    background: lightseagreen;
+}
+/* można też stosować (min-width: 1000px) lub też łączyć jedno i drugie */
+@media screen and (max-width: 1200px) {
+    main {
+        width: 900px;
+    }
+    header {
+        background: darkblue;
+    }
+}
+@media screen and (max-width: 1000px) {
+    main {
+        width: 800px;
+    }
+    header {
+        background: darkcyan;
+    }
+}
+@media screen and (max-width: 768px) {
+    main {
+        width: 90%;
+    }
+    header {
+        background: darkorchid;
+    }
+}
+@media screen and (max-width: 550px) {
+    header {
+        background: deeppink;
+    }
+    section {
+        flex-direction: column;
+    }
+    section div {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
