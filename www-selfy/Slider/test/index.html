@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Slider</title>
+    <style>
+        #box {
+        width: 300px;
+        height: 300px;
+        }
+    .red {
+        background: lightblue;
+    }
+    .black {
+        background: black;
+        color: #fff;
+    }
+    </style>
+</head>
+
+<body>
+<button id="lightsOff">Zgaś światło </button>
+    <div id="box"></div>
+    <div id="slider">
+
+    </div>
+    <script type="text/javascript">
+        // let pojemnik = document.getElementById('box')
+        let pojemnik = document.querySelector('#box')
+        // let pojemnik = document.querySelector('div')
+        // let divs = document.getElementsByTagName('div')
+        console.dir(pojemnik);
+
+
+        //praca ze stylami
+        pojemnik.style.background = "red"
+        pojemnik.style.width = "600px"
+        pojemnik.style.marginLeft = '100px'
+
+        //klasy w css-ie
+        //pojemnik.className=
+        pojemnik.className = readonly
+        pojemnik.className =  ''
+        pojemnik.classList.add ('red')
+        pojemnik.classList.remove ('s50')
+        // pojemnik.classList
+
+        function zmienPoreDnia() {
+            // document.body.classList.add('white')
+            document.body.classList.toggle('black');
+        }
+
+        //druga metoda zamiast html-owego onclck="zienPoreDnia()"
+        let lightsBtn = document.getElementById('lightsOff')
+        // lightsBtn.onclick = zmienPoreDnia;
+
+        //trzecia metoda
+        lightsBtn.addEventListener("click", zmienPoreDnia)
+
+
+
+
+    </script>
+</body>
+
+</html>

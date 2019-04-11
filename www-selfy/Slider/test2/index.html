@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="slider">
+        <div id="slides">
+            <img src="Zdjecia/1.jpg" alt="z1">
+            <img src="Zdjecia/2.jpg" alt="z2">
+            <img src="Zdjecia/3.jpg" alt="z3">
+            <img src="Zdjecia/4.jpg" alt="z4">
+            <img src="Zdjecia/5.jpg" alt="z5">
+            <img src="Zdjecia/6.jpg" alt="z6">
+            <img src="Zdjecia/7.jpg" alt="z7">
+            <img src="Zdjecia/8.jpg" alt="z8">
+            <img src="Zdjecia/9.jpg" alt="z9">
+            <img src="Zdjecia/10.jpg" alt="z10">
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        let slides = document.querySelector('#slides')
+
+        let polozenie = 0
+        let granica = -4000
+        let kierunek = -1
+
+        function zmienPolozenie() {
+            // polozenie--
+            if (polozenie < granica) { kierunek = 1 }
+            else if (polozenie > 0) { kierunek = -1 }
+            polozenie = polozenie + kierunek
+            slides.style.left = polozenie + 'px'
+            // setTimeout(zmienPolozenie, 16)
+        }
+        // setTimeout(zmienPolozenie, 33) 
+        setInterval(zmienPolozenie, 16)
+
+
+    </script>
+</body>
+
+</html>
